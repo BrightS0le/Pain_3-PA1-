@@ -32,19 +32,43 @@ namespace Pain_3__PA1_
         }
         public void makeNoise()
         {
-            Console.WriteLine("The noise this animal makes is: ");
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"..\..\Resources\Cat_Sound.wav");
-            player.Play();
+            Console.WriteLine("The noise this animal makes is: " + sound);
+         //   System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"..\..\Resources\Cat.wav");
+         // player.Play();
         }
         public void ageUP()
         {
             age++;
         }
-        private string name;
-        private int age;
-        private int weight;
-        private string noise;
+        protected string name;
+        protected int age;
+        protected int weight;
+        protected string noise;
 
+    }
+    class cat : animal
+    {
+        cat(string Na, int A, int W, string No, bool ta, string br, bool me)
+        {
+            name = Na;
+            age = A;
+            weight = W;
+            noise = No;
+            tail = ta;
+            breed = br;
+            menace = me;
+
+
+            }
+
+        public void printInfo()
+        {
+            this.printInfo();
+        }
+        private bool tail;
+        private string breed;
+        private bool menace;
+        
     }
     class Program
     {
@@ -54,6 +78,8 @@ namespace Pain_3__PA1_
             anim.printInfo();
             Console.ReadKey();
             anim.makeNoise();
+            cat Kohaku = new cat();
+            cat.printInfo();w
             Console.ReadKey();
         }
     }
